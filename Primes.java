@@ -27,7 +27,7 @@ public class Primes {
             }
             p++;
        }
-        for(int i=0; i<N+1; i++)
+        for(int i=0; i<=N; i++)
         {
             if(isPrime[i] == true)
             {
@@ -36,10 +36,13 @@ public class Primes {
             }
 
         }
-        int percent = (int)((100*prime)/N);
-        if (N>0)
+
+        //double precent = (100*prime)/(N);
+        double percent = (100.0 * prime) / (N); 
+        int roundedPercent = (int) Math.round(percent); 
+        if (N>1)
         {
-            System.out.println("There are " + prime + " primes between 2 and " + N + " (" + percent + "% are primes)");
+            System.out.println("There are " + prime + " primes between 2 and " + N + " (" + roundedPercent + "% are primes)");
         }
         
     }

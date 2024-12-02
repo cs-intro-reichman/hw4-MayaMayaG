@@ -233,12 +233,16 @@ public class ArrCharOps {
         int len1 = str1.length();
         int len2 = str2.length();
         int minLength = Math.min(len1, len2);
+
+        if (str1 == null || str2 == null) 
+         {
+            return -2; 
+
+         }
+        
         str1 = str1.toLowerCase();
         str2 = str2.toLowerCase();
 
-        if (str1 == null || str2 == null) 
-            return -2; 
-      
         for (int i = 0; i < minLength; i++) 
         {
             char c1 = str1.charAt(i);
