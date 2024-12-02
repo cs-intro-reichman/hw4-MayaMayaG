@@ -13,13 +13,13 @@ public class ArrCharOps {
         System.out.println(lastIndexOf(arr1, 'l')); // 5
         System.out.println(concat(arr1, arr2)); // clearly understood
         System.out.println(subArray(arr2, 2, 9)); // derstood
-        System.out.println(compareTo("abcd", "abcd")); // 
-        System.out.println(compareTo("abc", "abcd")); //
-        System.out.println(compareTo("abw", "abcd")); // 
-        System.out.println(compareTo("Abcd", "a")); // 
-        System.out.println(compareTo("apple", "banana")); 
-        System.out.println(compareTo("apple", "applepie"));
-        System.out.println(compareTo("Zoo", "zoo"));
+        System.out.println(compareTo("abcd", "abcd")); // 0
+        System.out.println(compareTo("abc", "abcd")); // -1
+        System.out.println(compareTo("abw", "abcd")); // 1
+        System.out.println(compareTo("Abcd", "a")); // -1
+        System.out.println(compareTo("apple", "banana")); //-1 
+        System.out.println(compareTo("apple", "applepie")); //-1
+        System.out.println(compareTo("Zoo", "zoo")); //-1
         System.out.println(hashCode(arr1));
         System.out.println(hashCode(arr2));
     }
@@ -233,15 +233,11 @@ public class ArrCharOps {
         int len1 = str1.length();
         int len2 = str2.length();
         int minLength = Math.min(len1, len2);
-        if (str1 == null && str2 == null) 
-            return -2; 
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
 
-        if (str1 == null) 
+        if (str1 == null || str2 == null) 
             return -2; 
-        
-        if (str2 == null) 
-            return -2; 
-        
       
         for (int i = 0; i < minLength; i++) 
         {
