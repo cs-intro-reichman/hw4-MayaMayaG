@@ -27,6 +27,9 @@ public class Primes {
             }
             p++;
        }
+
+       System.out.println("Prime numbers up to " + N +":");
+       
         for(int i=0; i<=N; i++)
         {
             if(isPrime[i] == true)
@@ -37,6 +40,7 @@ public class Primes {
 
         }
 
+        
         //double precent = (100*prime)/(N);
         double percent = (100.0 * prime) / (N); 
         int roundedPercent = (int) Math.round(percent); 
