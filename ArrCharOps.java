@@ -234,6 +234,12 @@ public class ArrCharOps {
         int len2 = str2.length();
         int minLength = Math.min(len1, len2);
 
+        if (str1 == "" || str2 == "") 
+        {
+            return -2; 
+
+        }
+
         if (len1 < len2) 
         {
             return -1; 
@@ -242,14 +248,6 @@ public class ArrCharOps {
         {
             return 1; 
         }
-
-
-
-        if (str1 == "" || str2 == "") 
-         {
-            return -2; 
-
-         }
         
         for (int i = 0; i < minLength; i++) 
         {
